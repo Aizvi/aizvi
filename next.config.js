@@ -35,4 +35,4 @@ const offlineConfig = {
 
 
 
-module.exports = withPlugins([withOffline, offlineConfig], [withCSS,withSass]);
+module.exports = withPlugins([withCSS,withSass], withOffline(offlineConfig));

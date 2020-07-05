@@ -14,7 +14,7 @@ const offlineConfig = {
 	// turn on the SW in dev mode so that we can actually test it
 	generateInDevMode: true,
 	workboxOpts: {
-		swDest: 'static/service-worker.js',
+		swDest: '../public/service-worker.js',
 		runtimeCaching: [
 			{
 				urlPattern: /^https?.*/,

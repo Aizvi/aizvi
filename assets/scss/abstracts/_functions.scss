@@ -1,0 +1,71 @@
+//------------------------------------------------------------------------------
+// This file contains only functions which return value.
+//------------------------------------------------------------------------------
+
+
+// Strip a unit from a number.
+//
+// @param {Number} $number A number with unit
+// @return {Number} A number without unit
+//
+@function strip_units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Convert a color (hexadecimal, rgb, hsl, keyword) to hsl().
+//
+// @param {Color} $color A color for hsl conversion
+// @return {String} A string which contains hsl() function with output values
+//
+@function hex_to_hsl($color) {
+  @if type_of($color) != color {
+    @warn '#{ $color } is not a color.';
+  } @else {
+    $h: round(strip-units(hue($color)) * 10) / 10;
+    $s: round(saturation($color) * 10) / 10;
+    $l: round(lightness($color) * 10) / 10;
+    @return unquote('hsl(#{$h}, #{$s}, #{$l})');
+  }
+}
+
+
+// Convert a color (hexadecimal, rgb, hsl, keyword) to hsla().
+//
+// @param {Color} $color A color for hsl conversion
+// @param {Number} number Alpha transparency number
+// @return {String} A string which contains hsla() function with output values
+//
+@function hex_to_hsla($color,$number) {
+  @if type_of($color) != color {
+    @warn '#{ $color } is not a color.';
+  } @else {
+    $h: round(strip-units(hue($color)) * 10) / 10;
+    $s: round(saturation($color) * 10) / 10;
+    $l: round(lightness($color) * 10) / 10;
+    @return unquote('hsla(#{$h}, #{$s}, #{$l},#{$number})');
+  }
+}
+
+
+
+
+// Convert a pixel number to rem unit.
+//
+// @param {Number} $px A pixel number for conversion
+// @param {Number} [$base-font-size:16]  Default base font-size
+// @return {Number} A number with rem unit
+//
+@function rem($px, $base-font-size: 16) {
+  @return ($px / $base-font-size) * 1rem;
+}
+
+// Convert a line-height pixel number to unit-less number.
+//
+// @param {Number} $px A pixel number for conversion
+// @param {Number} $font-size It is is important
+// @return {Number} A number with unit-less
+//
+@function line-height($px, $font-size) {
+  @return ($px / $font-size) * 1;
+}
+

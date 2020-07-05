@@ -1,0 +1,146 @@
+//------------------------------------------------------------------------------
+// This file contains only color variables which is not converted to any
+// functions like hsl, rgb. These colors are generated with the help of complex
+// algorithm.
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------------------
+// Divide color palette into 3 categories
+// Primary colors:
+// These are the colors you will use the most and will make up the majority
+// of your UI. Use them for most of your text, backgrounds, and borders,
+// as well as for things like secondary buttons and links.
+// Neutral colors:
+// Grays: Gray is a neutral color means without color, doesn't show up on the color wheel.
+// Majority of our web app use these colors. These are the colors you will use the most and
+// will make up the majority
+// of your UI. Use them for most of your text, backgrounds, and borders,
+// as well as for things like secondary buttons and links.
+// Accent / Supporting Colors:
+// These colors should be used fairly conservatively throughout your UI to
+// avoid overpowering your primary colors. Use them when you need an
+// element to stand out, or to reinforce things like error states or positive
+// trends with the appropriate semantic color.
+// ===== Colors End =====
+//------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+// Color palettes
+
+// Base Color Palettes:
+// Base color palettes include 4 primary colors and their derivative colors.
+
+
+// 1
+// Carmine-Red Set
+$carmine-red-base: #ff0036;
+$carmine-red-1: #ffe6e7;
+$carmine-red-2: #ffa3ab;
+$carmine-red-3: #ff7a8a;
+$carmine-red-4: #ff526c;
+$carmine-red-5: #ff2950;
+
+$carmine-red-6: $carmine-red-base;
+
+$carmine-red-7: #d90036;
+$carmine-red-8: #b30033;
+$carmine-red-9: #8c002c;
+$carmine-red-10: #660024;
+
+
+// 2
+// Polar-Green Set
+$polar-green-base: #52c41a;
+$polar-green-1: #f6ffed;
+$polar-green-2: #d9f7be;
+$polar-green-3: #b7eb8f;
+$polar-green-4: #95de64;
+$polar-green-5: #73d13d;
+
+$polar-green-6: $polar-green-base;
+
+$polar-green-7: #389e0d;
+$polar-green-8: #237804;
+$polar-green-9: #135200;
+$polar-green-10: #092b00;
+
+
+// 3
+// Geek-Blue Set
+$geek-blue-base: #2f54eb;
+$geek-blue-1: #f0f5ff;
+$geek-blue-2: #d6e4ff;
+$geek-blue-3: #adc6ff;
+$geek-blue-4: #85a5ff;
+$geek-blue-5: #597ef7;
+
+$geek-blue-6: $geek-blue-base;
+
+$geek-blue-7: #1d39c4;
+$geek-blue-8: #10239e;
+$geek-blue-9: #061178;
+$geek-blue-10: #030852;
+
+
+// 4
+// Sunrise-Yellow Set
+$sunrise-yellow-base: #fadb14;
+$sunrise-yellow-1: #feffe6;
+$sunrise-yellow-2: #ffffb8;
+$sunrise-yellow-3: #fffb8f;
+$sunrise-yellow-4: #fff566;
+$sunrise-yellow-5: #ffec3d;
+
+$sunrise-yellow-6: $sunrise-yellow-base;
+
+$sunrise-yellow-7: #d4b106;
+$sunrise-yellow-8: #ad8b00;
+$sunrise-yellow-9: #876800;
+$sunrise-yellow-10: #614700;
+
+
+
+// Neutral color I choose `Cool Gray`
+// Darkest Shades 1 - 500
+$color-gray1: #1F2933;
+$color-gray2: #323F4B;
+$color-gray3: #3E4C59;
+$color-gray4: #52606D;
+$color-gray5: #616E7C;
+// Lightest Shade 600 - 1000
+$color-gray6: #7B8794;
+$color-gray7: #9AA5B1;
+$color-gray8: #CBD2D9;
+$color-gray9: #E4E7EB;
+$color-gray10: #F5F7FA;
+// Miscellaneous Colors
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-eerie-black: #1A1C1C;
+$color-jet: #333333;
+$color-ghost-white: #F8F8F8;
+$color-anti-flash-white: #F1F1F1;
+$color-platinum: #E8E8E8;
+$color-white-smoke: #F3F4F5;
+$color-white-smoke-2: #F5F5F5;
+$color-white-smoke-3: #F6F6F6;
+$color-white-smoke-4: #F3F3F3;
+$color-light-gray: #CACDD2;
+$color-nickle: #737373;
+$color-snow: #FAFAFC;
+$color-snow-2: #F9F9F9;
+$color-anti-flash-white-2: #F0F0F2;
+$color-dark-gun-metal: #1C1D32;
+
+
+// Secondary Colors
+$color-secondary: $color-gray9;
+$color-secondary-text: $color-gray1

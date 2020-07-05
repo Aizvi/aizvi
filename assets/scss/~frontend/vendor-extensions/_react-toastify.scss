@@ -1,0 +1,57 @@
+//------------------------------------------------------------------------------
+// This file contains all the styles related to `react-toastify` component.
+//------------------------------------------------------------------------------
+
+
+$success: hex_to_hsl(#52C41A);
+
+.Toastify__toast-container {
+  z-index: 9999;
+  transform: translate3d(0, 0, 9999px);
+  position: fixed;
+  padding: 4px;
+  //border: 1px solid red;
+  font-size: 14px;
+  width: 100%;
+  &--top-center {
+    top: 1em;
+    left: 0;
+  }
+}
+
+
+.Toastify__toast {
+  position: relative;
+  direction: ltr;
+  text-align: center;
+  cursor: pointer;
+}
+
+.Toastify__toast {
+  &--success {
+    svg {
+      color: $success;
+    }
+  }
+}
+
+
+
+
+
+.Toastify__toast-body {
+  margin-bottom: 1rem;
+  // This is very important Breaking to a new line with inline-block.
+  display: inline-block;
+  border-radius: 4px;
+ // padding: 10px 16px;
+ padding: rem(20) rem(40);
+  //  This background-color will apply to the all the toast states 'success', 'warning'
+ background-color: $g-white;
+ box-shadow: $g-shadow-md;
+  color: $g-gray4;
+
+  svg {
+    vertical-align: middle;
+  }
+}

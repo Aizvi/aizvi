@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all Bootstrap override styles.
+// -----------------------------------------------------------------------------
+
+
+// Bootstrap Nav / Tabs component
+
+// Link
+$color-maastricht-blue: #0f2137;
+
+  // ul
+.nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; // The flex-grow property sets the flex grow factor to true
+  flex-shrink: 0; // flex shrink false because we don't want to make the items smaller
+ // justify-content: flex-start; // Flex items are packed toward the start of the line.
+  justify-content: center;
+  margin: 0;
+  padding: 18px 24px;
+  list-style: none;
+  border-radius: 6px;
+
+}
+
+
+
+.nav-link {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+
+  color: hex_to_hsla($color-maastricht-blue, 0.5);
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+
+}
+
+// link
+.nav-tabs .nav-link.active {
+  color: hex_to_hsl($color-maastricht-blue);
+  background-color: $g-white;
+  box-shadow: $g-shadow-md;
+}
+
+
+.m-h-460 {
+  min-height: 460px;
+  height: 100%;
+}
+
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
+  min-height: auto;
+}

@@ -1,0 +1,1 @@
+This folder only contains the styles of the global components.

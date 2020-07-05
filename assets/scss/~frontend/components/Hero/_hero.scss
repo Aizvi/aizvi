@@ -1,0 +1,157 @@
+//------------------------------------------------------------------------------
+// This file will contain our hero styles
+//------------------------------------------------------------------------------
+
+
+.section-hero {
+  position: relative;
+  background: url("/images/hero-image.jpg") no-repeat 50% 50%, linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-size: cover;
+  padding: rem(120) 0;
+  &:before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: hsla(0,0%,0%,.55);
+  }
+
+
+
+  &--loaded {
+    background: url("/images/hero-image.jpg") no-repeat 50% 50%, linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-size: cover;
+    &:before {
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom: 0;
+      background-color: hsla(0,0%,0%,.55);
+    }
+  }
+}
+
+
+
+
+$jumbotron-Heading: 48;
+.jumbotron__heading {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: rem($jumbotron-Heading);
+  font-weight: 500;
+  color: $g-white;
+}
+
+
+.jumbotron__subtitle {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: rem(18);
+  font-weight: 400;
+  color: hex_to_hsla($color-white,.88);
+}
+
+
+
+
+
+// Contact Button
+
+
+.jumbotron__contact {
+  font-size: rem(16);
+  border-radius: 0.375rem;
+  padding: rem(16) rem(46);
+}
+
+
+
+// Quote Form which contains all text and form element
+.quote-form {
+  max-width: 400px;
+  background: $g-white;
+  box-shadow: $g-shadow-lg;
+  padding: 42px 30px 50px;
+  border-radius: 0.375rem; // 6px
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.q-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: $g-gray4;
+}
+
+
+.q-text {
+  margin: 0;
+  font-size: 14px;
+  color: $g-gray4;
+}
+
+.quote-btn {
+  border-radius: 0.375rem;
+  padding: rem(16) rem(34);
+}
+
+
+
+.quote-alert-text {
+  font-size: 14px;
+}
+
+
+
+
+// Desktop First Breakpoints
+@media (max-width: 1199px) {
+
+
+  .jumbotron__heading {
+    font-size: rem($jumbotron-Heading - 6);
+  }
+
+
+}
+
+@media (max-width: 991px) {
+
+  .section-hero {
+    padding: rem(80) 0;
+  }
+
+
+  .jumbotron__heading {
+    font-size: rem($jumbotron-Heading - 12);
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .section-hero {
+    padding: rem(60) 0;
+  }
+
+  // Full Titles
+  .jumbotron {
+    text-align: center;
+  }
+
+  .jumbotron__heading {
+    font-size: rem($jumbotron-Heading - 18);
+  }
+
+  // JumboTron
+  .jumbotron {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,115 @@
+//------------------------------------------------------------------------------
+// This file contains all styles related to the `frontend - index` page.
+//------------------------------------------------------------------------------
+
+
+.industry {
+  padding: rem(100) 0;
+  //&:after {
+  //  content: '';
+  //  height: 100%;
+  //  background: url('/images/curve.svg') bottom no-repeat;
+  //  background-size: contain;
+  //  display:block;
+  //  position: absolute;
+  //  bottom: -2px;
+  //  left: -10px;
+  //  right: -10px;
+  //  z-index: 1;
+  //}
+}
+
+
+
+
+
+.service {
+  position: relative;
+  padding: rem(100) 0;
+  background: url('/images/left-shape.svg') left top/30% no-repeat,
+  url('/images/right-shape.svg') right top/30% no-repeat hex_to_hsl(#fdfdfd);
+}
+
+
+
+
+
+
+
+
+.work-process {
+  padding: rem(100) 0;
+}
+
+
+.banner {
+    padding: rem(80) 0;
+    background: hex_to_hsl(#151414) url('/images/world-map.svg') no-repeat 90% center;
+    background-size: 650px;
+}
+
+
+.portfolio {
+  padding: rem(100) 0;
+}
+
+
+.team {
+  padding: rem(100) 0;
+  background-color: hex_to_hsl(#fdfdfd);
+}
+
+
+
+
+
+
+
+// Desktop First Breakpoints
+@media (max-width: 991px) {
+  .industry {
+    padding: rem(80) 0;
+  }
+
+  .service {
+    padding: rem(80) 0;
+  }
+
+  .work-process {
+    padding: rem(80) 0;
+  }
+
+  .banner {
+    padding: rem(60) 0;
+  }
+
+  .contact {
+    padding: rem(80) 0;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .industry {
+    padding-top: rem(60) 0;
+  }
+
+  .service {
+    padding: rem(60) 0;
+  }
+
+  .work-process {
+    padding: rem(60) 0;
+  }
+
+  .banner {
+    padding: rem(40) 0;
+  }
+
+  .contact {
+    padding: rem(60) 0;
+  }
+
+}
+
+

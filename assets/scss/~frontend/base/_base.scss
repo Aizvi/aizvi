@@ -1,0 +1,87 @@
+//------------------------------------------------------------------------------
+// This file contains only basic styles.
+//------------------------------------------------------------------------------
+
+/**
+ * Setup box-sizing
+ */
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;// html inherit
+}
+
+
+
+
+/**
+ * Basic typography style
+ */
+body {
+  color: $g-gray4;
+  font-family: $g-font-family-base;
+  line-height: 1.5;//  now it is 24px
+  font-size: 1rem;
+ -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $g-primary;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+/**
+ * Basic style for image element
+ */
+img {
+  vertical-align: middle;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+/**
+ * Basic style for iframe element
+ */
+iframe {
+  border:none;
+  overflow:hidden;
+}
+
+
+
+/**
+  * Scroll-top Button
+ */
+.s-top {
+  width: rem(50);
+  height: rem(50);
+  border-radius: 100%;
+  background-color: $g-white;
+  box-shadow: $g-shadow-md;
+  color: $g-gray4;
+  position: fixed;
+  display: none;
+  bottom: 50px;
+  right: 30px;
+  z-index: 8;
+}
+
+

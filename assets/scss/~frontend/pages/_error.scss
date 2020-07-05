@@ -1,0 +1,39 @@
+//------------------------------------------------------------------------------
+// This file contains all styles related to the `frontend - index` page.
+//------------------------------------------------------------------------------
+
+
+.error {
+  border-top: 1px solid #f6f6f6;
+  border-bottom: 1px solid #f6f6f6;
+  padding: rem(100) 0;
+  text-align: center;
+}
+
+.error__h1 {
+  color: $g-primary-6;
+  margin: 0;
+  font-size: rem(128);
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.error__p {
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.error__p2 {
+  color: $g-gray6;
+  font-size: 20px;
+  max-width: 560px;
+  margin: 0 auto 18px;
+}
+
+
+.error__btn {
+  border-radius: 4px;
+  padding: 12px 32px;
+}
+

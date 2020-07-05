@@ -1,0 +1,167 @@
+//------------------------------------------------------------------------------
+// This file contains all the styles related to Button component.
+//------------------------------------------------------------------------------
+
+
+/* Button component */
+
+// Cursor pointer will not show until we add `disabled` attribute.
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+// Global Disabled style
+.btn.disabled, .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.btn {
+  display: inline-block;
+  color: $g-gray4;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+ // line-height: 1.5;
+  &:focus {
+    outline: none;
+  }
+}
+
+
+// Template 1
+.btn-primary {
+    color:$g-white;
+    border-color: $g-primary;
+    background-color: $g-primary;
+    transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
+  // Light
+  &:hover {
+    border-color: $g-primary-5;
+    background-color: $g-primary-5;
+  }
+
+  // Same styles as :active but global opacity will be apply
+  &.disabled,&:disabled {
+    border-color: $g-primary-7;
+    background-color: $g-primary-7;
+  }
+}
+
+// Case 1 on color `primary` when there is not any `pseudo selector :disabled` or not any `.disabled`
+// class but there is one `pseudo selector :active` then please apply these styles.
+// Or
+// Case 2 on color `primary` when there is not any `pseudo selector :disabled` or not any `.disabled`
+// class but there is one class `.active` then please apply these styles.
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
+  border-color: $g-primary-7;
+  background-color: $g-primary-7;
+}
+
+
+
+
+// Template 2
+.btn-secondary {
+  color: $g-secondary-text;
+  border-color: $g-secondary;
+  background-color: $g-secondary;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
+  // Light
+  &:hover {
+    border-color: lighten($color-secondary,.5);
+    background-color: lighten($color-secondary,.5);
+  }
+}
+
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active {
+  border-color: darken($color-secondary,.5);
+  background-color: darken($color-secondary,.5);
+}
+
+
+// White
+.btn-light {
+  color: $g-jet;
+  border-color: $g-white;
+  background-color: $g-white;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
+  &:hover {
+    border-color: hex_to_hsl(#F9F9F9);
+    background-color: hex_to_hsl(#F9F9F9);
+  }
+}
+
+.btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active {
+  border-color: hex_to_hsl(#F1F1F1);
+  background-color: hex_to_hsl(#F1F1F1);
+}
+
+
+
+
+//normal btn
+//
+//btn xl
+//
+//
+//medium
+//.btn {
+//  display: inline-block;
+//  color: #000;
+//  text-align: center;
+//  vertical-align: middle;
+//  user-select: none;
+//  background-color: transparent;
+//  border: 1px solid transparent;
+//  padding: 0.375rem 0.75rem; //6px 12px consistent
+//  font-size: 1rem; // 16px
+//  line-height: 1.5;
+//  border-radius: 0.25rem; // 4px
+//  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+//box-shadow 0.15s ease-in-out;
+//}
+//
+//
+//
+//
+//
+//
+//.btn-lg, .btn-group-lg > .btn {
+//  padding: 0.5rem 1rem; 8px 16px
+//  font-size: 1.25rem; // 20px
+//  line-height: 1.5;
+//  border-radius: 0.3rem; //4.8px
+//}
+//
+//.btn-sm, .btn-group-sm > .btn {
+//  padding: 0.25rem 0.5rem; // 4px 8px
+//  font-size: 0.875rem; // 14px
+//  line-height: 1.5;
+//  border-radius: 0.2rem; // 3.2px
+//}
+
+
+// Remember if you want to use button that has some `icon` or `svg` then don't use `react-strap` Button
+// component instead make a `button element` and add a class .btn-icon and your custom styles class on
+// the icon that contains styles about padding, color, font-size opacity etc.
+.btn--icon {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  appearance: none; // vendor prefixes will be added by postcss-loader
+  &:focus {
+    outline: none;
+  }
+}

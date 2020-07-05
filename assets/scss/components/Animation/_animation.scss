@@ -1,0 +1,76 @@
+//------------------------------------------------------------------------------
+// This file contains all the styles related to Animation component.
+//------------------------------------------------------------------------------
+
+
+// fadeInDown used on the header
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// MoveBounce Y Axis used on the Team section
+@keyframes moveBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+// Circle Wave Pulse Used inside process section
+@keyframes circleWavePulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    border-color: transparent;
+  }
+}
+
+.wave-pulse {
+  width: 1px;
+  height: 0;
+  margin: 0 auto;
+  &:before,&:after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    display: block;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    background: $g-white;
+    border-radius: 50%;
+    border: 1px solid #ababab;
+    transform: translate(-50%, -50%);
+    animation: circleWavePulse 3s linear infinite;
+  }
+}
+
+.wave-pulse-2:before {
+  animation-delay: 1.2s;
+}
+
+.wave-pulse-3::before {
+  animation-delay: 2.4s;
+}

@@ -1,0 +1,12 @@
+// Make custom bootstrap in one file
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/images';
+// Optional
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/transitions';// used in tab, modal
+// @import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/tooltip';
+@import '~bootstrap/scss/utilities';

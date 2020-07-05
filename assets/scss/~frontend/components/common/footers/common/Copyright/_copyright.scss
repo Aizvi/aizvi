@@ -1,0 +1,157 @@
+//------------------------------------------------------------------------------
+// This file contains all styles related to the `copyright` component.
+//------------------------------------------------------------------------------
+
+.f {
+  background-color: hex_to_hsl(#f8f8f8);
+}
+
+
+// First -> Section
+.f__area {
+  padding: rem(60) 0;
+}
+
+
+.f-w__logo {
+  margin-bottom: 16px;
+}
+
+
+.f__logo {
+  display: inline-block;
+
+  svg {
+    vertical-align: middle;
+
+    .logo__circle {
+      fill: $g-primary;
+    }
+
+    .logo__text {
+      fill: $g-jet;
+    }
+  }
+}
+
+
+.f-w__list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 14px;
+    a {
+      display: inline-block;
+      transition: color 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+  }
+
+}
+
+// Variations for style
+.black-coral-f-14 {
+  font-size: 14px;
+  color: $g-gray4;
+}
+
+.black-coral-f-14-h-primary {
+  font-size: 14px;
+  color: $g-gray4;
+
+  &:hover {
+    color: $g-primary;
+  }
+}
+
+.jet-f-16-700-h-jet {
+  color: $g-jet;
+  font-size: 16px;
+  font-weight: 700;
+
+  &:hover {
+    color: $g-jet;
+  }
+}
+
+.primary-f-14-600-h-primary {
+  font-size: 14px;
+  font-weight: 600;
+  color: $g-primary;
+
+  &:hover {
+    color: $g-primary;
+  }
+}
+
+
+.f__h6 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: $g-jet;
+}
+
+
+.f-store {
+  box-shadow: $g-shadow;
+}
+
+// End First -> Section Complete
+
+
+// Second -> Section Copyright
+.f__copyright {
+  padding-bottom: 30px;
+}
+
+
+.f__copyright-text {
+  display: block;
+  font-size: 14px;
+  color: $g-gray4;
+}
+
+
+.f__social-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  li:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  li {
+    list-style: none;
+    a {
+      font-size: 18px;
+      display: block;
+      text-align: center;
+      height: 48px;
+      width: 48px;
+      line-height: 44px;
+      background-color: transparent;
+      color: $g-gray4;
+      border-radius: 50%;
+      transition: border-color 0.7s cubic-bezier(0.645, 0.045, 0.355, 1),background-color 0.7s cubic-bezier(0.645, 0.045, 0.355, 1),
+      color 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      &:hover {
+        color: $g-white;
+        background-color: $g-primary;
+      }
+
+      svg {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+
+// End Second -> Section Copyright

@@ -1,0 +1,205 @@
+//------------------------------------------------------------------------------
+// This file contains all styles related to the `contact` component.
+//------------------------------------------------------------------------------
+
+.contact {
+  padding: rem(100) 0;
+  background: url('/images/contact-map.png') center right no-repeat;
+}
+
+
+.contact__wrap {
+  margin-bottom: 50px;
+}
+
+.contact__heading {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 40px;
+  color: $g-jet;
+}
+
+.contact__subtitle {
+  margin: 0;
+  font-size: 16px;
+  color: $g-gray4;
+}
+
+
+
+
+// Section-Contact Form
+// If the div.field is last-child please apply the margin-bottom
+.field:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+
+.contact-need {
+  padding: 16px;
+}
+
+
+
+.contact-btn {
+  border-radius: 0.375rem;
+  padding: rem(16) rem(34);
+}
+
+
+// Right side
+.info-1 {
+  text-align: center;
+}
+
+// h3
+.info-1__rating-h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 40px;
+  font-weight: 700;
+  color: $g-jet;
+}
+
+// div
+.info-1__star-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffbb00;
+  font-size: 24px;
+
+
+  > span {
+    display: inline-block;
+  }
+
+  > span:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+
+}
+
+// p
+.info-1__text-p {
+  color: $g-jet;
+  font-size: 16px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+
+
+
+// info-text-2
+.info-2 {
+  text-align: left;
+  margin-top: 60px;
+}
+
+
+.info-2__text-h6 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: $g-jet;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.info-2__h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  display: inline-block;
+  font-size: 40px;
+  color: $g-primary;
+  position: relative;
+  a {
+    display: inline-block;
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &:before {
+      content: '';
+      width: 0;
+      height: 1px;
+      bottom: 0;
+      position: absolute;
+      left: auto;
+      right: 0;
+      z-index: 1;
+      transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+      background: currentColor;
+    }
+  }
+
+  &:hover a:before {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+
+
+}
+
+//div
+.info-2__text-2 {
+  font-size: 14px;
+  color: $g-gray4;
+}
+
+
+
+
+
+// Desktop First Breakpoints
+@media (max-width: 991px) {
+  .contact {
+    padding: rem(80) 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: rem(60) 0;
+  }
+}
+
+
+
+// Mobile First Breakpoints
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  // This div.field__body help us to make horizontal fields. It is just a wrapper to make
+  // two fields horizontal But this will only work for large screen devices
+  .field__body {
+    display: flex;
+    flex-basis: 0; // 0
+    flex-grow: 5; // Grow Factor 5
+    flex-shrink: 1; // true
+  }
+
+  // If the div.field is not last-child please apply right margin
+  .field__body > .field:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  // Makes direct field Grow to 1
+  .field__body > .field {
+    flex-grow: 1;
+  }
+
+  // Makes direct field shrink to 1
+  .field__body > .field {
+    flex-shrink: 1;
+  }
+
+  // Default if the div.field is not last-child then margin-bottom will apply.
+  // But if it is inside the horizontal wrapper .field-body then remove margin-bottom
+  .field__body .field {
+    margin-bottom: 0;
+  }
+
+}

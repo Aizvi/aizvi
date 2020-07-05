@@ -1,0 +1,50 @@
+//------------------------------------------------------------------------------
+// This file contains all special link styles
+//------------------------------------------------------------------------------
+
+
+
+
+$paddingRight: 20;
+
+.special-link {
+  position: relative;
+  display: inline-block;
+  padding-right: #{$paddingRight}px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    padding-right: 0;
+    padding-left: #{$paddingRight}px;
+
+    .link-arrow--before {
+      left: 0;
+    }
+
+    .link-arrow--after {
+      right: -#{$paddingRight}px;
+    }
+  }
+}
+
+.special-link__arrow {
+  transition: all 0.2s ease-in-out;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+// Arrow Before
+.link-arrow--before {
+  left: -#{$paddingRight}px;
+}
+
+// Arrow After
+.link-arrow--after {
+  right: 0;
+}

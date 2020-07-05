@@ -1,0 +1,103 @@
+
+
+// Equal columns
+.slick-track {
+    display: flex;
+}
+
+$margin-left-right-between-slides: 16;
+
+
+// The slides
+.slick-slide {
+    height: auto;
+    margin: 20px #{$margin-left-right-between-slides}px 60px;
+}
+
+.slick-slide > div {
+    height: 100%;
+}
+
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: static;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li {
+    display: inline-block;
+}
+
+.slick-dots li:first-child button {
+    margin-left: 0;
+}
+
+.slick-dots li button {
+    // Disable numbers on the button
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    color: transparent;
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    opacity: 1;
+    position: relative;
+    outline: none;
+    margin: 0 4px;
+    appearance: none; // vendor prefixes will be added by postcss-loader
+
+
+
+    &:focus {
+        outline: none;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        width: 8px;
+        height: 8px;
+        background-color: #d8d8d8;
+        z-index: 1;
+        transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    &:hover:before {
+        background-color: $g-primary;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+    }
+
+}
+
+.slick-dots li.slick-active button:before {
+   background-color: $g-primary;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}
+

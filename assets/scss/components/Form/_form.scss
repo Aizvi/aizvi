@@ -1,0 +1,35 @@
+//------------------------------------------------------------------------------
+// This file contains all the styles related to Form component / Form Validation.
+//------------------------------------------------------------------------------
+
+/* Form component / Validation */
+
+$invalid-bg: #333333;
+
+
+// Add this class on the form
+
+.was-validated  {
+  .invalid-tooltip {
+    display: block;
+  }
+}
+
+.invalid-tooltip {
+  position: absolute;
+  top: 100%;
+  z-index: 5;
+  display: none;
+  left: 0;// width: 100%
+  right: 0;// width: 100%
+  padding: rem(6) rem(14);
+  text-align: left;
+  margin-top: 1px;
+  font-size: rem(12); // 12px
+  line-height: 1.5;
+  color: $g-white;
+  background-color: hex_to_hsla($invalid-bg,.9);
+  border-radius: 4px;
+}
+
+

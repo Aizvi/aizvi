@@ -1,0 +1,500 @@
+//------------------------------------------------------------------------------
+// This file contains all the styles related to section component.
+//------------------------------------------------------------------------------
+
+// Section-1
+
+.section-1 {
+  position: relative;
+}
+
+
+.curve {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+
+.section-1__content {
+  text-align: center;
+}
+
+
+
+.section-1__wave {
+  display: inline-block;
+  color: $g-primary;
+  margin-bottom: 14px;
+}
+
+
+.section-1__subtitle {
+  color: $g-gray4;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
+// h3
+.section-1__description {
+  font-size: 40px;
+  color: $g-jet;
+  font-weight: 700;
+  margin: 0;
+  span {
+    color: $g-primary;
+  }
+}
+
+// End -> Section-1
+
+
+
+
+// Section-Process
+
+.process__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+
+
+.process__subtitle {
+  color: $g-gray4;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
+.process__description {
+  font-size: 40px;
+  color: $g-jet;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  span {
+    color: $g-primary;
+  }
+}
+
+.process__wave {
+  display: inline-block;
+  color: $g-primary;
+}
+
+// STEPS <= Text
+.process__total-text {
+  position: relative;
+  font-size: 14px;
+  line-height: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $g-gray4;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 35px 80px 35px 42px;
+  z-index: 1;
+  // Line
+  &:before {
+    content: '';
+    background-color: $g-primary;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    width: 34px;
+    height: 1px;
+  }
+
+}
+
+
+// 04
+.process__total {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 120px;
+  line-height: .8;
+  font-weight: 700;
+  color: #ededed;
+  z-index: -1;
+}
+
+// ------------
+
+// Block
+$left-right: 15;
+$circle-size: 50;
+$circle-border-width: 2;
+
+.process-item-wrapper {
+  display: flex;
+  margin-left: #{-$left-right}px;
+  margin-right: #{-$left-right}px;
+}
+
+.process-item {
+  position: relative;
+  // These are very important properties
+  // By default flex-basis is auto.
+  /*
+    Each flex item has a flex-basis which is sort of like its initial size.
+    Then from there, any remaining free space is distributed proportionally (based on flex-grow)
+    among the items. With auto, that basis is the contents size (or defined size with width, etc.).
+    As a result, items with bigger text within are being given more space overall in your example.
+    If you want your elements to be completely even, you can set flex-basis: 0. This will set the flex basis
+    to 0 and then any remaining space (which will be all space since all basises are 0) will be proportionally
+    distributed based on flex-grow.
+   */
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 #{$left-right}px;
+
+  &:hover {
+    .process-circle {
+      background-color: $g-primary;
+      color: $g-white;
+      border-color: $g-primary;
+    }
+  }
+}
+
+
+
+// Vertical Center Line
+
+.process-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #ededed;
+  top: #{$circle-size / 2}px; // Vertical center line according to the circle
+  left: #{$left-right}px;
+}
+
+
+.process-circle-wrap {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 56px;
+}
+
+
+.process-circle {
+  position: relative;
+  z-index: 1;
+  width: #{$circle-size}px;
+  height: #{$circle-size}px;
+  text-align: center;
+  border: 2px solid #e8e8e8; // Formula line-height vertical center =
+  // $circle-size  -  border-top-bottom * 2 for (border-left-right)
+  line-height: #{$circle-size - ($circle-border-width * 2) }px;
+  border-radius: 50%;
+  font-size: 18px;
+  background-color: $g-white;
+  color: $g-jet;
+  transition: all 0.7s ease-in-out;
+}
+
+
+.process-content__heading {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: $g-gray4;
+}
+
+.process-content__description {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: $g-gray6;
+}
+
+
+.process__link {
+  font-size: 14px;
+  font-weight: 700;
+  color: $g-primary;
+}
+
+
+
+// End -> Section-Process
+
+
+
+// Section-Banner
+
+
+
+.banner__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $g-white;
+  font-size: 40px;
+  span {
+    color: $g-primary;
+  }
+}
+
+
+
+
+.banner-btn-group {
+  text-align: center;
+}
+
+.banner__btn {
+  margin: 10px;
+  border-radius: rem(6);
+  padding: rem(18) rem(34);
+  font-size: 14px;
+  font-weight: 500;
+  * {
+      vertical-align: middle;
+  }
+}
+
+
+
+// Section Portfolio
+.nav-wrapper {
+  // Fully Expand Height
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: hex_to_hsl(#f7f8fb);
+  user-select: none;
+
+  // Width
+  &::-webkit-scrollbar {
+    border-radius: 16px;
+    height: 8px;
+  }
+
+
+  // Handle Important
+  &::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background: hex_to_hsla($color-black, 0.18);
+  }
+
+  // Track Line
+  &::-webkit-scrollbar-track {
+    background: #f3f3f3;
+  }
+
+
+}
+
+
+.tab-pane__content {
+  margin-top: 60px;
+}
+
+.portfolio__under-text {
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $g-jet;
+  text-align: center;
+
+  a {
+    position: relative;
+    display: inline-block;
+    color: $g-primary;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 1px;
+      bottom: -1px;
+      position: absolute;
+      left: auto;
+      right: 0;
+      z-index: 1;
+      transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+      background: currentColor;
+    }
+
+    &:hover:before {
+      width: 100%;
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+
+
+// Section => Team
+
+.section-team__content {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+
+.section-team__svg {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  top: -10px;
+  color: #e2e2e2;
+  animation: moveBounce 5s linear infinite; // from the base.scss
+  z-index: 0;
+}
+
+
+.section-team__area {
+  position: relative;
+  z-index: 1;
+}
+
+
+.section-team__heading {
+  font-size: 40px;
+  color: $g-jet;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 30px;
+  span {
+    color: $g-primary;
+  }
+}
+
+
+.section-team__description {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: $g-gray6;
+}
+
+
+.section-team__link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+
+.section-team__link-1 {
+  margin-right: 16px;
+  font-weight: 600;
+  padding: 14px 34px;
+  border-radius: 0.375rem;
+}
+
+.section-team__link-2 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
+
+// End Section => Team
+
+
+
+
+
+// Desktop First Breakpoints
+@media (max-width: 991px) {
+
+  .process__wrapper {
+    margin-bottom: 50px;
+  }
+
+
+
+
+  .process-item-wrapper {
+    display: block;
+  }
+
+
+  .process-item {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+
+  .process-line {
+    left: 39px;
+    height: 100%;
+    width: 1px;
+    top: #{$left-right}px;
+  }
+
+  .process-content {
+    padding: 10px 0 50px 30px;
+  }
+
+
+  .banner__content {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .banner__heading {
+    font-size: 32px;
+  }
+
+}
+@media (max-width: 767px) {
+  .process__wrapper {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+
+  .process__block-1 {
+    margin-bottom: 30px;
+  }
+
+
+  .banner__heading {
+    font-size: 24px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+// span
+.section__word {
+  position: absolute;
+  font-size: 94px;
+  margin: 0;
+  display: block;
+  top: 100%;
+  color: hsla(0, 0%, 0%, 0.06);
+  font-weight: 700;
+  text-transform: uppercase;
+}

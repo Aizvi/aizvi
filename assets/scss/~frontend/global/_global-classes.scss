@@ -1,0 +1,310 @@
+//------------------------------------------------------------------------------
+// Some global classes that we can use on the frontend.
+//------------------------------------------------------------------------------
+
+
+/* Global classes */
+
+/*
+  * Global classes you can use these classes on elements and components of your application.
+  * Remember: Don't confuse your mind with utility classes & Global classes.
+  * Utility class has a prefix 'u' that represents root namespace also has a sub-namespace
+  * prefix. These are low-level utility classes that make it easy to build complex user interfaces.
+  * Global class has a prefix 'gl' and these classes are ready-made styles that you could
+  * use on different elements like span, div, h1, h3 and components like button, selectbox. scrollbar etc.
+ */
+
+/* Anchor Text with brand color */
+.gl-link {
+  color: $g-primary;
+  text-decoration: underline;
+  transition: color 0.3s linear;
+  &:hover {
+    color: $g-primary-5;
+  }
+  &:active {
+    color: $g-primary-7;
+  }
+}
+
+
+/*
+ * This is the Global Icon Container class.
+ * Case 1:
+ * But, here is the issue if your icon container class contains a svg
+ * then the explicit or implicit width and height of the container class will not resize the SVG.
+ * But, if you wanted the SVG should be resized according to the width and height of the container class
+ * then you have to also explicitly define same width and height to your SVG with the help of `size`
+ * attribute.
+ * Case 2 Absolute position:
+ * If you wanted to set SVG to the absolute position then because of the nature of the absolute position
+ * it removes the element in question from the normal flow of the document structure. So unless you explicitly
+ * set a width it won't know how wide to be. Therefore, the width and height of the container class resize
+ * the SVG.
+*/
+.gl-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle; // Very important property
+  width: 1.5rem; // 24px
+  height: 1.5rem; // 24px
+}
+
+
+/**
+  * Global offset class which helps to set the element off from the layout.
+ */
+.gl-offset {
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+
+
+//
+//
+///*
+//  * Chrome Default Style for scrollbar
+// */
+//.gl-scroll {
+//  // Width
+//  &::-webkit-scrollbar {
+//    height: 8px;
+//    width: 8px;
+//  }
+//
+//
+//  // Track
+//  &::-webkit-scrollbar-track {
+//    background: #eee;
+//  }
+//
+//  // Handle
+//  &::-webkit-scrollbar-thumb {
+//    background: #888;
+//  }
+//
+//  // Handle on hover
+//  &::-webkit-scrollbar-thumb:hover {
+//    background: #555;
+//  }
+//}
+//
+//
+//
+///*
+//  * Global Rating Style apply on any div that has `i` element as children
+// */
+//.gl-rating-style {
+//  > i {
+//    margin-left: 2px;
+//    color: #ff9600;
+//    &:first-child {
+//      margin-left: 0;
+//    }
+//  }
+//}
+//
+//.gl-rating-style-2 {
+//  > i {
+//    margin-left: 2px;
+//    color: #ff4500;
+//    &:first-child {
+//      margin-left: 0;
+//    }
+//  }
+//}
+//
+///*
+//  * Signup, Login Social Buttons
+// */
+//  .gl-s-api {
+//    width: 80%;
+//    margin: 0 auto;
+//    &__btn {
+//      border: none;
+//      cursor: pointer;
+//      text-align: center;
+//      display: block;
+//      width: 100%;
+//      padding: 12px;
+//      color: $g-white;
+//      font-size: 14px;
+//      font-weight: 600;
+//      transition: background-color 0.5s linear;
+//
+//      &:focus {
+//        outline: 0;
+//      }
+//      span {
+//        margin-left: 10px;
+//      }
+//    }
+//
+//    &__btn--fb {
+//      background-color: #4267b2;
+//      &:hover {
+//        background-color: darken(#4267b2,5%);
+//      }
+//    }
+//    &__btn--gplus {
+//      background-color: #dd4b39;
+//      &:hover {
+//        background-color: darken(#dd4b39,5%);
+//      }
+//    }
+//
+//  }
+//
+// /*
+// * Inline Maker 1
+//  */
+//.gl-inline {
+//  display: flex;
+//  flex-wrap: nowrap;
+//  align-items: center;
+//  div {
+//    flex:1;
+//    margin-right: 14px;
+//    &:last-child {
+//      margin-right: 0;
+//    }
+//  }
+//}
+//
+///*
+//* Inline Maker 2
+// */
+//.gl-l-r {
+//  display: flex;
+//  align-items: center;
+//  justify-content: space-between;
+//}
+//
+///**
+//  * DOB: Date of Birth Select Box
+// */
+//.gl-dob {
+//  display: flex;
+//  align-items: center;
+//  .select-box {
+//    flex: 1;// Because of this property all select boxes automatically fill space that a wrapper has.
+//    margin-right: 8px;
+//    &:last-child {
+//      margin-right: 0;
+//    }
+//  }
+//}
+//
+
+//
+//.gl-h1 {
+//  color: $g-brand-secondary-color;
+//  font-size: 18px;
+//  margin-bottom: 8px;// has margin-bottom
+//}
+//
+//.gl-text {
+//  display: block;
+//  color: #a0a0a0;
+//  font-size: 13px;
+//}
+//
+//.gl-label {
+//  margin-bottom: 8px;// has margin-bottom
+//  display: block;
+//  color: $g-brand-secondary-color;
+//  font-size: 13px;
+//  font-weight: 600;
+//}
+//
+///**
+//* Global Tag
+// */
+//.gl-tag {
+//    // because of flex
+//    margin-right: 8px;
+//    display: inline-block; // important tag
+//    margin-bottom: 10px;
+//    padding: 5px 13px;
+//    font-size: 12px;
+//    font-weight: 600;
+//    border-radius: 22px;
+//    &:last-child {
+//      margin-right: 0;
+//    }
+//  }
+//
+///*
+//* Global Modal Classes
+// */
+//
+//
+//.gl-modal-h1 {
+//  margin-bottom: 8px;
+//  line-height: 1;
+//  display: block;
+//  color: $g-brand-secondary-color;
+//  font-size: 20px;
+//  font-weight: 600;
+//}
+//
+//
+//.gl-modal-text {
+//  color: #a0a0a0;
+//  font-size: 13px;
+//}
+//
+//
+//
+//.gl-modal-btn-group {
+//  display: flex;
+//  align-items: center;
+//  button {
+//    margin-right: 12px;
+//    &:last-child {
+//      margin-right: 0;
+//    }
+//  }
+//}
+//
+//
+//
+//
+//
+//
+//
+//@media (max-width:575px) {
+//  .gl-inline {
+//    display: block;
+//    div {
+//      display: block;
+//      margin-right: 0;
+//    }
+//  }
+//
+//  .gl-l-r {
+//    display: block;
+//  }
+//
+//
+//
+//  // Birthday
+//  .gl-dob {
+//    display: block;
+//    .select-box {
+//      width: 100%;
+//      margin-bottom: 8px;
+//      margin-right: 0;
+//      &:last-child {
+//        margin:0;
+//      }
+//    }
+//  }
+//}
+//
+//

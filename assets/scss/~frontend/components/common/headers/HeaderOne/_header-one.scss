@@ -1,0 +1,852 @@
+//------------------------------------------------------------------------------
+// This file contains all styles related to the header of the layout.
+//------------------------------------------------------------------------------
+
+/* Header */
+
+// Global variables declare for the Header Component
+$paddingTopBottom: 26; // It is very important it helps the header to take padding from top-bottom.
+// and Request a Quote wrapper
+
+// Global variables declare for the GoInput Component
+
+$heightOfTheInput: 48;
+$boxShadowOfTheInput: $g-shadow-md;
+$paddingLeftRightOfTheInput: 48;
+
+// Global mixins and variables declare for the Menus
+// Arrow Left
+$arrow-width: 7 !default; // 7 pixel
+@mixin ul-dropdown-left-arrow-before-layer-1 {
+  content: '';
+  position: absolute;
+  top: -#{$arrow-width}px;
+  left: 9px;
+  display: inline-block;
+  border-right: #{$arrow-width}px solid transparent;
+  border-bottom: #{$arrow-width}px solid #ccc;
+  border-left: #{$arrow-width}px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+@mixin ul-dropdown-left-arrow-after-layer-2 {
+  content: '';
+  position: absolute;
+  top: -#{$arrow-width - 1}px;
+  left: 10px;
+  display: inline-block;
+  border-right: #{$arrow-width - 1}px solid transparent;
+  border-bottom: #{$arrow-width - 1}px solid $g-white;
+  border-left: #{$arrow-width - 1}px solid transparent;
+}
+
+// Arrow Right
+@mixin ul-dropdown-right-arrow-before-layer-1 {
+  content: '';
+  position: absolute;
+  top: -#{$arrow-width}px;
+  right: 12px; // Important
+  display: inline-block;
+  border-right: #{$arrow-width}px solid transparent;
+  border-bottom: #{$arrow-width}px solid #ccc;
+  border-left: #{$arrow-width}px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+@mixin ul-dropdown-right-arrow-after-layer-2 {
+  content: '';
+  position: absolute;
+  top: -#{$arrow-width - 1}px ;
+  right: 13px; // Important
+  display: inline-block;
+  border-right: #{$arrow-width - 1}px solid transparent;
+  border-bottom: #{$arrow-width - 1}px solid $g-white;
+  border-left: #{$arrow-width - 1}px solid transparent;
+}
+// Menu Item
+@mixin item-active-scheme {
+  background-color: $g-platinum;
+  color: $g-jet;
+  .drop-down__icon {
+    color: $g-jet;
+  }
+}
+@mixin item-repeat-styles {
+  // line-height is very important property it helps to reduce bottom gap from the button
+  text-align: center;
+  display: block;
+  line-height: 1.5;// default body line-height 21px
+  font-size: 14px;
+  font-weight: 600;
+  padding: rem($paddingTopBottom) rem(14);
+  background-color: transparent;
+  transition: background-color 0.3s,color 0.3s;
+  color: $g-gray5;
+  border: none;
+  // Focus state
+  &:focus {
+    outline: none;
+  }
+}
+
+// ------------------------------------------------
+
+
+
+.message-hiring {
+  background-color: $g-gray10;
+  padding: 12px 20px;
+}
+
+
+// Message Section
+.mh-content__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: $g-black;
+}
+
+.mh-content__subtitle {
+  font-size: 12px;
+  color: $g-gray4;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.mh-content-2 {
+  display: flex;
+  margin: 0;
+  padding: 0;
+   li {
+    list-style: none;
+  }
+
+  > li {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    > a {
+      display: inline-block;
+      padding: 4px;
+    }
+  }
+}
+
+.mh-tel {
+  font-size: 14px;
+  font-weight: 700;
+  color: $g-gray4
+}
+
+.mh-mail {
+  font-size: 14px;
+  color: $g-gray4
+}
+
+// End - Message Section
+
+
+
+
+
+// Desktop Header
+
+
+
+
+.header-d {
+  position: relative;
+  background-color: $g-white;
+  //border-bottom: 1px solid $g-gray10;
+}
+
+
+.header-d.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: $g-shadow-lg;
+  animation: 900ms cubic-bezier(0.2, 1, 0.22, 1) 0s normal none 1 running fadeInDown; // from the _base.scss
+}
+
+
+// Logo Component
+.header-d__logo {
+  display: inline-block;
+  svg {
+    vertical-align: middle;
+    .logo__circle {
+        fill: $g-primary;
+      }
+
+    .logo__text {
+      fill: $g-jet;
+    }
+  }
+}
+
+// Change colors of the logo
+.header-d.is-sticky {
+  // Logo Component
+  .header-d__logo {
+    svg {
+      .logo__text {
+        fill: $g-primary;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+// Input 1
+
+.g-input-wrap {
+  position: relative;
+}
+
+#g-input {
+  display: block;
+  width: 100%;
+  height: rem($heightOfTheInput);
+  padding: 0.375rem rem($paddingLeftRightOfTheInput);
+  font-size: rem(14);
+  line-height: 1.5; // 24px
+  color: $g-gray4;
+  background-color: $color-anti-flash-white;
+  border: 0;
+  transition: background-color .3s, box-shadow .3s;
+
+
+  &:focus {
+    outline: 0;
+    box-shadow: $boxShadowOfTheInput;
+    background-color: $g-white;
+
+    + .g-icon {
+      color: $g-primary;
+    }
+  }
+
+  &::placeholder {
+    font-size: rem(14);
+    color: $g-gray5;
+  }
+}
+.is-active > #g-input {
+  box-shadow: $boxShadowOfTheInput;
+  background-color: $g-white;
+
+  + .g-icon {
+    color: $g-primary;
+  }
+}
+.g-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $g-gray7;
+  width: #{$paddingLeftRightOfTheInput}px;
+  height: #{$heightOfTheInput}px;
+  transition: color 0.2s;
+}
+
+// Part-b
+
+
+.part-b {
+  border-bottom: 1px solid $g-gray10;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  background-color: $g-white;
+  padding: 18px 40px 18px 22px;  // Match with button width
+}
+
+.part-b__btn {
+  position: absolute;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  top:50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s,color 0.3s;
+  color: $g-gray5;
+
+
+  // Different
+  &:hover, &:focus {
+    background-color: $g-snow-2;
+    color: $g-jet;
+  }
+
+  // Different
+  &:active {
+    background-color: $g-platinum;
+    color: $g-jet;
+  }
+}
+
+
+#g-input-2 {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 6px 40px;// Match with the button width
+  font-size: rem(18);
+  font-weight: 700;
+  line-height: 1.5; // 24px
+  color: $g-gray4;
+  background-color: transparent;
+  border: 0;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::placeholder {
+    font-size: rem(18);
+    font-weight: 700;
+    color: $g-gray4;
+    opacity: .8;
+  }
+}
+
+
+
+
+
+
+
+
+
+// End Part-b
+
+// GoResult component
+$goResultPadding: 16;
+
+.go-result {
+  position: absolute;
+  max-height: 300px;
+  top: 100%;
+  left: 0; // It will helps the div to take 100% width
+  right: 0; // It will helps the div to take 100% width
+  padding: rem($goResultPadding);
+  z-index: 100;
+  display: none;
+  overflow: auto;
+  background-color: $g-white;
+  box-shadow: $boxShadowOfTheInput;
+}
+.go-result.is-open {
+  display: block;
+}
+.go-result--scroll {
+  // Width
+  &::-webkit-scrollbar {
+    width: 8px;
+    transition: .3s;
+  }
+
+
+  // Track Line
+  &::-webkit-scrollbar-track {
+    background: $g-white-smoke;
+  }
+
+  // Handle Important
+  &::-webkit-scrollbar-thumb {
+    background: hex_to_hsla($color-black, 0.07);
+  }
+}
+
+
+// It will show on empty results
+.go-result__msg {
+  position: relative;
+  padding: rem(18);
+  color: $g-gray4;
+  font-size: rem(14);
+  text-align: center;
+}
+
+
+// Filled with results
+.go-r-heading {
+  padding: 8px #{$goResultPadding}px;
+  color: $g-gray4;
+  font-weight: 700;
+  font-size: rem(20);
+  display: block;
+}
+
+// div element style a
+.go-r-data.go-r-data--style-a {
+  transition: background-color 0.4s, color 0.4s;
+  padding: #{$goResultPadding}px #{$goResultPadding * 2}px;
+  margin: 0 -#{rem($goResultPadding)};
+  color: $g-gray4;
+  font-size: rem(14);
+  cursor: pointer;
+
+  &:hover {
+    background-color: $g-snow-2;
+    color: $g-eerie-black;
+  }
+
+  &:focus,&:active {
+    background-color: $g-gray9;
+    color: $g-eerie-black;
+  }
+}
+
+
+
+// Button element style b with item schemes
+.go-r-data.go-r-data--style-b {
+  display: inline-block;
+  transition: background-color 0.4s;
+  padding: 14px;
+  color: $g-primary;
+  font-size: rem(14);
+  border-radius: rem(38);
+  font-weight: bold;
+  margin: 0 rem(8) rem(8) 0;
+  border: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+// End GoResult component
+
+
+
+
+
+
+
+
+
+// Menu component
+.p-menu {
+  margin: 0;
+  padding: 0;
+  // Recursive
+  li {
+    list-style: none;
+  }
+  // Recursive
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.p-menu {
+  display: none;
+}
+
+// Apply the same styles for all links
+.p-menu__item {
+  @include item-repeat-styles;
+  // Hover state
+  &:hover {
+    background-color: $g-snow-2;
+    color: $g-jet;
+
+    .drop-down__icon {
+      color: $g-jet;
+    }
+  }
+  // Active state
+  &:active {
+    @include item-active-scheme;
+  }
+
+
+}
+
+
+.drop-down {
+  position: relative;
+}
+
+// Button
+.is-active > .p-menu__item {
+  @include item-active-scheme;
+}
+
+// dropdown-list
+.drop-down__list.is-open {
+  display: block;
+}
+
+// ul
+.drop-down__list {
+  &:after {
+    @include ul-dropdown-right-arrow-after-layer-2;
+  }
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  min-width: rem(200);
+  text-align: left;
+  background-color: $g-white;
+  background-clip: padding-box;
+  box-shadow: $g-shadow-md;
+
+  > li {
+    > a {
+      display: block;
+      background-color: transparent;
+      transition: background-color 0.3s,color 0.3s;
+      color: $g-gray5;
+      padding: rem(16) rem(20);
+      font-size: 14px;
+
+      &:hover {
+        background-color: $g-snow-2;
+        color: $g-jet;
+      }
+
+      &:active {
+        background-color: $g-primary;
+        color: $g-white;
+      }
+    }
+  }
+}
+
+.drop-down__icon {
+  transition: color 0.3s;
+  color: $g-gray6;
+}
+
+
+
+// Menu Button More - Search
+.menu-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.menu__btn-0,.menu__btn-1 {
+  @include item-repeat-styles;
+  // Hover state
+  &:hover {
+    background-color: $g-snow-2;
+    color: $g-jet;
+  }
+  // Active state
+  &:active {
+    background-color: $g-platinum;
+    color: $g-jet;
+  }
+}
+
+// End - Menu Button More - Search
+
+
+
+
+// Panel Menu
+.panel-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: visibility 0s .3s;
+
+  &__overlay {
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    z-index: 0;
+    position: absolute;
+    transition: opacity 0.2s ease;
+   display: none;
+    background-color: hex_to_hsla($color-black,0.7);
+  }
+}
+
+.is-open.panel-menu {
+  visibility: visible;
+  transition-delay: 0s;
+
+  .panel-box {
+    left: 0;
+  }
+}
+
+.is-visible.panel-menu__overlay {
+   display: block;
+}
+
+// Panel-box
+
+.panel-box {
+  position: absolute;
+  top: 0; // You can also enter substitute of these 2 properties i.e. height: 100vh
+  bottom: 0; // You can also enter substitute of these 2 properties i.e. height: 100vh
+  left: -320px;
+  width: 320px;
+  background-color: $g-white;
+  transition: left 0.3s ease;
+  box-shadow: $g-shadow-md;
+  z-index: 1;// greater than overlay
+  color: $g-gray4; // Represents the text color
+  overflow-x: hidden;
+}
+
+
+// Header
+$panelHeaderMinHeight: 54;
+$panelTextColor: #383838;
+
+.panel__actions {
+  position: relative;
+  padding: rem(14);
+  min-height: #{$panelHeaderMinHeight}px;
+  border-bottom: 1px solid $g-gray10;
+}
+
+
+.panel-action__title {
+  text-align: center; // Makes text center
+  color: hex_to_hsl($panelTextColor);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+
+.panel-action__btn {
+  position: absolute;
+  width: #{$panelHeaderMinHeight}px;
+  height: #{$panelHeaderMinHeight}px;
+  top:0;
+  right: 0;
+  font-size: 16px;
+  background-color: transparent;
+  transition: background-color 0.3s,color 0.3s;
+  color: $g-gray5;
+  border: none;
+  // Different
+    &:hover, &:focus {
+      background-color: $g-snow-2;
+      color: $g-jet;
+    }
+
+    // Different
+    &:active {
+      background-color: $g-platinum;
+      color: $g-jet;
+    }
+}
+
+.panel-action__btn--left {
+  border-right: 1px solid $g-gray10;
+  left: 0;
+}
+
+.panel-action__btn--right {
+  border-left: 1px solid $g-gray10;
+  right: 0;
+}
+
+
+.panel__children {
+  position: relative;
+  background-color: $g-white;
+  overflow: hidden;
+  height: calc(100% - #{$panelHeaderMinHeight}px); // Very top important property
+}
+
+// Move to the Right => Default it is placed on the right side
+.panel {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  transform: translateX(100%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  transition: transform 0.3s;
+}
+
+
+// In the first panel there always will be `is-open` class will be add
+.panel.is-visible {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+// This class helps to hide the default open panel.
+.panel.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// These styles are for the links element that have `href=`  attribute
+$anchorPaddingTopBottom: 14;
+.panel__list-wrap > ul {
+  margin: 0;
+  padding: 0;
+
+  > li {
+    list-style: none;
+    border-bottom: 1px solid $g-gray10;
+    > a {
+      color: $panelTextColor;
+      display: block;
+      line-height: 22px;
+      font-size: 14px;
+      padding: #{$anchorPaddingTopBottom}px 24px;
+      background-color: transparent;
+      transition: background-color .4s;
+
+      &:hover {
+          background-color: $g-snow-2;
+          color: $g-eerie-black;
+        }
+      // Don't use :active pseudo selector on the links
+      &:focus {
+        background-color: $g-platinum;
+        color: $g-eerie-black;
+      }
+    }
+  }
+}
+
+// These styles are for the links element that don't have `href=`  attribute
+.panel__list-wrap > ul > li > a:not([href]):not([tabindex]) {
+  background-color: transparent;
+  color: $panelTextColor;
+}
+
+
+
+.panel-next {
+  position: relative;
+}
+
+// Remember when we change the font-size of anchor element then line-height will also be reflected.
+// In the above example we have set the font-size = 14 then line-height automatically becomes 21px
+// So by default button has font-size:16px so we have to set the line-height according to the anchor
+// element then our button will be vertical centered aligned.
+.panel-next__btn {
+  position: absolute;
+  padding: #{$anchorPaddingTopBottom}px 16px;
+  font-size: 16px;
+  line-height: 22px;
+  top:0;
+  right: 0;
+  background-color: $g-white;
+  transition: background-color 0.3s,color 0.3s;
+  color: $g-gray5;
+  border: none;
+  border-left: 1px solid $g-gray10;
+  // Different
+  &:hover, &:focus {
+    background-color: $g-snow-2;
+    color: $g-jet;
+  }
+
+  // Different
+  &:active {
+    background-color: $g-platinum;
+    color: $g-jet;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+
+
+// Desktop First Breakpoints
+
+// Extra Small Devices iPhone-x 375
+@media (max-width: 386px) {
+  .m-content__title {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+  // Dynamic render part-b with the help of react don't show on the large screen devices
+  .part-b {
+    display: none;
+  }
+
+
+  // Menu Button More - Search
+  .menu__btn-0 {
+      display: none;
+    }
+  // End - Menu Button More - Search
+}
+
+
+
+
+
+
+// xl greater than
+@media (min-width: 1200px) {
+
+  // Menu Button More - Search
+  .menu__btn-1 {
+    display: none;
+  }
+
+  // End - Menu Button More - Search
+
+
+
+  // Menu component
+  .p-menu {
+    display: flex;
+  }
+  // End - Menu component
+
+  // Panel component
+  .panel {
+    display: none;
+  }
+  // End - Panel component
+
+
+
+}

@@ -1,0 +1,82 @@
+//------------------------------------------------------------------------------
+// This file contains all theme Sass variables.
+//------------------------------------------------------------------------------
+
+
+// Regular font family
+$font-family-sans-serif: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+
+// Base Font Family
+$g-font-family-base: $font-family-sans-serif !default;
+
+
+// -------- Colors -----------
+$g-primary: hex_to_hsl($carmine-red-6);
+$g-info: hex_to_hsl($geek-blue-6);
+$success-color: hex_to_hsl($polar-green-6);
+$processing-color: hex_to_hsl($geek-blue-6);
+$error-color: hex_to_hsl($carmine-red-5);
+$highlight-color: hex_to_hsl($carmine-red-5);
+$warning-color:  hex_to_hsl($sunrise-yellow-6);
+
+// Color used by default to control hover and active backgrounds and for
+// alert info backgrounds.
+$g-primary-1: hex_to_hsl($carmine-red-1);
+$g-primary-2: hex_to_hsl($carmine-red-2);
+$g-primary-3: hex_to_hsl($carmine-red-3);
+$g-primary-4: hex_to_hsl($carmine-red-4);
+$g-primary-5: hex_to_hsl($carmine-red-5);
+
+$g-primary-6: $g-primary;
+
+$g-primary-7: hex_to_hsl($carmine-red-7);
+$g-primary-8: hex_to_hsl($carmine-red-8);
+$g-primary-9: hex_to_hsl($carmine-red-9);
+$g-primary-10: hex_to_hsl($carmine-red-10);
+
+
+// Neutral color I choose `Cool Gray`
+// Darkest Shades 1 - 500
+$g-gray1: hex_to_hsl($color-gray1);
+$g-gray2: hex_to_hsl($color-gray2);
+$g-gray3: hex_to_hsl($color-gray3);
+$g-gray4: hex_to_hsl($color-gray4);
+$g-gray5: hex_to_hsl($color-gray5);
+// Lightest Shade 600 - 1000
+$g-gray6: hex_to_hsl($color-gray6);
+$g-gray7: hex_to_hsl($color-gray7);
+$g-gray8: hex_to_hsl($color-gray8);
+$g-gray9: hex_to_hsl($color-gray9);
+$g-gray10: hex_to_hsl($color-gray10);
+// Miscellaneous Colors
+$g-white: hex_to_hsl($color-white);
+$g-black: hex_to_hsl($color-black);
+$g-eerie-black: hex_to_hsl($color-eerie-black);
+$g-jet: hex_to_hsl($color-jet);
+$g-ghost-white: hex_to_hsl($color-ghost-white);
+$g-anti-flash-white: hex_to_hsl($color-anti-flash-white);
+$g-anti-flash-white-2: hex_to_hsl(#F0F0F2);
+$g-platinum: hex_to_hsl($color-platinum);
+$g-white-smoke: hex_to_hsl($color-white-smoke);
+$g-white-smoke-2: hex_to_hsl($color-white-smoke-2);
+$g-white-smoke-3: hex_to_hsl($color-white-smoke-3);
+$g-white-smoke-4: hex_to_hsl($color-white-smoke-4);
+$g-light-gray: hex_to_hsl($color-light-gray);
+$g-nickle: hex_to_hsl($color-nickle);
+$g-snow: hex_to_hsl($color-snow);
+$g-snow-2: hex_to_hsl($color-snow-2);
+$g-dark-gun-metal: hex_to_hsl($color-dark-gun-metal);
+
+
+// Secondary Colors
+$g-secondary: hex_to_hsl($color-secondary);
+$g-secondary-text: hex_to_hsl($color-secondary-text);
+
+
+// Box Shadows
+$g-shadow: 0 1px 3px 0 hex_to_hsla(#000000, 0.1), 0 1px 2px 0 hex_to_hsla(#000000, 0.06) !default;
+$g-shadow-md: 0 4px 6px -1px hex_to_hsla(#000000, 0.1), 0 2px 4px -1px hex_to_hsla(#000000, 0.06) !default;
+$g-shadow-lg: 0 10px 15px -3px hex_to_hsla(#000000, 0.1), 0 4px 6px -2px hex_to_hsla(#000000, 0.05) !default;
+$g-shadow-xl: 0 20px 25px -5px hex_to_hsla(#000000, 0.1), 0 10px 10px -5px hex_to_hsla(#000000, 0.04) !default;
+$g-shadow-2xl: 0 25px 50px -12px hex_to_hsla(#000000, 0.25) !default;
+

@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all our custom utility classes that are specific only for
+// layout design like for spacing and color classes etc.
+// -----------------------------------------------------------------------------
+
+@import 'abstracts/mixins';
+
+
+/**
+ * Prefix understanding: u means utility which is a prefix for root namespace,
+ * s means spacing which is a prefix for sub-namespace, d represents display which also a sub-namespace,
+ * c represents color also a sub-namespace and so on.
+ */
+
+/**
+ * Utility classes for spacing:
+ * A wide range of shorthand margin and padding utility classes to modify an
+ * an element appearance.
+ */
+// $g-attribute, $g-sides & $g-space-amount variable comes from `_mixin-utilities-spacing` file.
+@include utility-margin-padding($g-attribute, $g-sides);

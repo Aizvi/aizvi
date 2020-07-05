@@ -1,0 +1,27 @@
+// Configuration and helpers
+@import 'abstracts/functions';
+@import 'abstracts/colors';
+
+// Default Theme with Red-Carmine as a Primary color
+@import 'themes/default';
+
+// Global Classes second because we could override global styles on other area
+@import '~frontend/global/global-classes';
+
+// Reusable components first because we could override component styles on other area
+@import 'components/main';
+
+// Base Styles
+@import '~frontend/base/base';
+@import '~frontend/base/typography';
+@import '~frontend/base/pre-config';
+
+
+// These are components styles that are not reusable.
+@import '~frontend/components/main';
+
+// Page-specific styles
+@import '~frontend/pages/main';
+
+// Vendor Extensions
+@import '~frontend/vendor-extensions/main';

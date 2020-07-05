@@ -1,0 +1,433 @@
+//------------------------------------------------------------------------------
+// This file contains all the styles related to cards component.
+//------------------------------------------------------------------------------
+
+
+.card-1 {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: $g-white;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  transition: all 0.4s linear;
+  box-shadow: $g-shadow-2xl;
+  transform: translateY(0);
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+
+.card-1__body {
+  padding: 30px 15px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+
+
+
+
+// Icon
+.card-1__icon {
+  min-width: 80px;
+  margin-right: 10px;
+  color: $g-jet;
+}
+
+
+.card-1__svg {
+  width: 65px;
+  height: 65px;
+}
+
+
+
+
+// Content Box
+
+// H5
+.card-1__title {
+  font-size: 24px;
+  color: $g-jet;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+// P
+.card-1__text {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: rem(14);
+  color: $g-gray5;
+}
+
+
+.card-1__link {
+  font-size: 14px;
+  font-weight: 700;
+  color: $g-primary;
+}
+
+// End Card-1
+
+
+
+// Card 2
+
+.card-2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: $g-white;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  text-align: center;
+  transition: all 0.4s linear;
+  transform: translateY(0);
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+
+
+// This is where we need a padding
+.card-2__body {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  padding: rem(20);
+}
+
+
+
+
+
+
+.card-2__icon {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+
+.card-2__icon-wrap {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-2__svg {
+  width: 60px;
+  height: 60px;
+}
+
+// Very important
+.card-2__icon--scheme-1 {
+  background-color: #fff1f0;
+  svg * {
+    stroke: #f5222d;
+  }
+}
+
+
+.card-2__icon--scheme-2 {
+   background-color: #f6ffed;
+   svg * {
+     stroke: #52c41a;
+   }
+ }
+
+
+.card-2__icon--scheme-3 {
+  background-color: #f0f5ff;
+  svg * {
+    stroke: #2f54eb;
+  }
+}
+
+
+.card-2__icon--scheme-4 {
+  background-color: #e6fffb;
+  svg * {
+    stroke: #13c2c2;
+  }
+}
+
+.card-2__icon--scheme-5 {
+  background-color: #f9f0ff;
+  svg * {
+    stroke: #722ed1;
+  }
+}
+
+
+.card-2__icon--scheme-6 {
+  background-color: #fff0f6;
+  svg * {
+    stroke: #eb2f96;
+  }
+}
+
+
+
+// h5 card title
+.card-2__title {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: $g-jet;
+}
+
+// p
+.card-2__text {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: $g-gray6;
+}
+
+
+.card-2__link {
+  padding: rem(12) rem(32);
+  border-radius: rem(6);
+}
+
+
+.card-2__count {
+  position: absolute;
+  font-size: rem(200);
+  color: hex_to_hsla(#f5f6f7,.7);
+  right: 18px;
+  bottom: -45px;
+  font-weight: 700;
+  z-index: 0;
+}
+
+
+// End Card-2
+
+
+
+
+// Card portfolio
+
+
+
+
+.card-portfolio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: $g-white;
+  background-clip: border-box;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px -10px rgba(51, 51, 51, 0.1);
+}
+
+
+.card-portfolio__wrap {
+
+}
+
+
+.card-portfolio__img {
+//  height: 250px;
+  // img-top
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+.card-portfolio__body {
+  flex: 1 1 auto;
+  padding: 24px 22px 80px;
+}
+
+.card-portfolio__title {
+  letter-spacing: .04rem;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: $g-jet;
+}
+
+.card-portfolio__category {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: $g-primary;
+}
+
+
+.card-portfolio__text {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $g-gray4;
+}
+
+.card-portfolio__view-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 56px;
+  line-height: 55px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  color: $g-primary;
+  &:before {
+    background-color: $g-primary;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: -1;
+  }
+}
+
+
+
+.card-portfolio__view {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 20px;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+
+
+
+
+
+.card-portfolio__view-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+
+.card-portfolio:hover {
+  .card-portfolio__view-wrap {
+    color: $g-white;
+    &:before {
+      transform: translateY(0);
+    }
+  }
+}
+
+
+
+
+// End Card portfolio
+
+
+
+// Card Team
+
+
+.person-item {
+
+}
+
+.person-item__wrapper {
+  max-width: 316px;
+  margin: auto auto 60px;
+}
+
+
+.person-item__image {
+  position: relative;
+
+  &:hover {
+    .person__social {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+.person__social {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  padding: 6px 0;
+  background-color: $g-white;
+  box-shadow: $g-shadow-md;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.person__social-inner {
+    a {
+      display: inline-block;
+      color: $g-jet;
+      font-size: 16px;
+      padding: 10px 14px;
+      transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+      &:hover {
+        color: $g-primary;
+      }
+
+      svg {
+        vertical-align: middle;
+      }
+    }
+}
+
+
+.person-info {
+  margin-top: 14px;
+}
+
+// h5
+.person__name {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: $g-jet;
+}
+
+// div
+.person__position {
+  font-size: 14px;
+  color: $g-gray4;
+}
+
+
+// End Card Team

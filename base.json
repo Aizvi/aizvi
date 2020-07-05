@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"lib": ["dom", "es2017"],
+		"strict": true,
+		"baseUrl": ".",
+		"paths": {
+			"@assets/*": ["./assets/*"],
+			"@data/*": ["./data/*"],
+			"@models": ["./models"],
+			"@dashboard": ["./dashboard"],
+			"@models/*": ["./models/*"],
+			"@translations/*": ["./translations/*"],
+			"@utils/*": ["./utils/*"],
+			"@components": ["./views/components"],
+			"@containers": ["./views/containers"],
+			"@layouts": ["./views/layouts"],
+			"@hooks": ["./views/hooks"],
+			"@toasts": ["./views/toasts"],
+			"@context": ["./views/context"],
+			"@redux/*": ["./redux/*"]
+		}
+	}
+}

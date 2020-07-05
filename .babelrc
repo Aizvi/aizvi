@@ -1,0 +1,28 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@assets": "./assets",
+          "@dashboard": "./dashboard",
+          "@data": "./data",
+          "@types": "./types",
+          "@models": "./models",
+          "@translations": "./translations",
+          "@utils": "./utils",
+          "@vendor": "./vendor",
+          "@components": "./views/components",
+          "@containers": "./views/containers",
+          "@layouts": "./views/layouts",
+          "@hooks": "./views/hooks",
+          "@toasts": "./views/toasts",
+          "@context": "./views/context",
+          "@redux": "./redux"
+        }
+      }
+    ]
+  ]
+}

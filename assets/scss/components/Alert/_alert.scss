@@ -1,0 +1,18 @@
+//------------------------------------------------------------------------------
+// This file contains all the styles related to Alert component.
+//------------------------------------------------------------------------------
+
+
+/* Alert component */
+.alert {
+  position: relative;
+  padding: 12px 20px;
+ // margin-bottom: 1rem;
+  //border-radius: 1px;
+}
+
+.alert-success {
+  background-color: hex_to_hsl($polar-green-1);
+  color: $success-color;
+  font-weight: 700;
+}

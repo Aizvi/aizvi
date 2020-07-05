@@ -9,7 +9,9 @@ const withSass = require('@zeit/next-sass');
 // Configuration Try to install app via chrome
 const offlineConfig = {
 	workboxOpts: {
-		swDest: '../public/service-worker.js',
+		swDest: process.env.NEXT_EXPORT
+			? 'service-worker.js'
+			: 'static/service-worker.js',
 		runtimeCaching: [
 			{
 				urlPattern: /^https?.*/,

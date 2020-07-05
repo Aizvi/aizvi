@@ -77,7 +77,7 @@ export const Main = (props: Props) => {
 	return (
 		<EnhancedIndex>
 			<Head>
-				<title>{`${process.env.appName} - ${title}`}</title>
+				<title>{`${process.env.NEXT_PUBLIC_APP_NAME} - ${title}`}</title>
 				{/* Stylesheet for the Admin
 				<link rel="stylesheet" href="/css/app.css"/> */}
 			</Head>

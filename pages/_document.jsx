@@ -24,38 +24,47 @@ import Document, { Head, Main, NextScript } from 'next/document';
 class MyDocument extends Document {
 	render() {
 		return (
-			<html lang="en" dir="ltr">
-				<Head>
-					{/* Required meta tags */}
-					<meta name="description" content="" />
-					<meta name="author" content="" />
-					{/* Manifest to work offline */}
-					<link rel="manifest" href="/manifest.json" />
-					{/* Google Fonts */}
-					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
-				</Head>
-				<body>
-					<Main />
-					<NextScript />
-					<script
-						dangerouslySetInnerHTML={{
-							__html: `window.ga = function() {ga.q.push(arguments)};ga.q = [];ga.l = +new Date;
-						ga('create', 'UA-XXXXX-Y', 'auto');
-						ga('send', 'pageview')`,
-						}}
-					></script>
-					<script src="https://www.google-analytics.com/analytics.js" async defer />
-					{/* Noscript */}
-					<noscript>
-						<h1>JavaScript is disabled in your browser.</h1>
-						<span>
-							Please enable JavaScript in your browser or upgrade to a
-							JavaScript-capable browser.
-						</span>
-					</noscript>
-				</body>
-			</html>
-		);
+      <html lang="en" dir="ltr">
+        <Head>
+          {/* Required meta tags */}
+          <meta charSet="utf-8" />
+          <meta name="description" content="" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          {/* Manifest to work offline */}
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+          {/* Google Fonts */}
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+          />
+          <meta name="theme-color" content="#ffffff" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')`
+            }}
+          ></script>
+          <script
+            src="https://www.google-analytics.com/analytics.js"
+            async
+            defer
+          />
+          {/* Noscript */}
+          <noscript>
+            <h1>JavaScript is disabled in your browser.</h1>
+            <span>
+              Please enable JavaScript in your browser or upgrade to a
+              JavaScript-capable browser.
+            </span>
+          </noscript>
+        </body>
+      </html>
+    );
 	}
 }
 

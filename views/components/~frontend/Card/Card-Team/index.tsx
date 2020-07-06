@@ -42,15 +42,15 @@ export const CardTeam = (props: Props) => {
                     <div className="person__social">
                         <div className="person__social-inner">
 							{/* eslint-disable-next-line react/jsx-no-target-blank */}
-							<a target="_blank" href={social.facebook}>
+							<a target="_blank" href={social.facebook} rel="noopener noreferrer">
                                 <FaFacebook/>
                             </a>
 							{/* eslint-disable-next-line react/jsx-no-target-blank */}
-							<a target="_blank" href={social.twitter}>
+							<a target="_blank" href={social.twitter} rel="noopener noreferrer">
                                 <FaTwitter/>
                             </a>
 							{/* eslint-disable-next-line react/jsx-no-target-blank */}
-                            <a target="_blank" href={social.instagram}>
+                            <a target="_blank" href={social.instagram} rel="noopener noreferrer">
                                 <FaInstagram/>
                             </a>
                         </div>

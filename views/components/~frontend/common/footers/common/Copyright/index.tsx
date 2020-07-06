@@ -146,25 +146,25 @@ export const Copyright = () => {
 
                                 <li className="">
                                     {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                                    <a href="https://facebook.com" target="_blank">
+                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                         <FaFacebook />
                                     </a>
                                 </li>
                                 <li className="">
                                     {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                                    <a href="https://facebook.com" target="_blank">
+                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                         <FaTwitter />
                                     </a>
                                 </li>
                                 <li className="">
                                     {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                                    <a href="https://facebook.com" target="_blank">
+                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                         <FaLinkedin />
                                     </a>
                                 </li>
                                 <li className="">
                                     {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                                    <a href="https://facebook.com" target="_blank">
+                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                         <FaInstagram />
                                     </a>
                                 </li>

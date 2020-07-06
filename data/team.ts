@@ -38,7 +38,7 @@ export const PersonData: PersonItem[] = [
     {
         id: 2,
         name: 'Ahmad Hussnain',
-        position: 'Entrepreneur',
+        position: 'Entrepreneur / Consultant',
         image: {
             url: '/images/member-1.jpg',
             altTitle: 'Member 2'

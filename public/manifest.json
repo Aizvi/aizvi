@@ -14,8 +14,9 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "start_url": "/?source=pwa",
   "background_color": "#ffffff",
-  "start_url": "/",
-  "display": "standalone"
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ffffff"
 }

@@ -35,8 +35,7 @@ export const CardPortfolio = (props: Props) => {
 
 
 
-		// eslint-disable-next-line react/jsx-no-target-blank
-			<a href={permalink} target="_blank">
+			<a href={permalink} target="_blank" rel="noopener noreferrer">
 				<div className="card-portfolio">
 					<img src={image.url} alt={image.altTitle} className="card-portfolio__img"/>
 					<div className="card-portfolio__body">

@@ -34,10 +34,7 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
           {/* Google Fonts */}
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
-          />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
         <body>

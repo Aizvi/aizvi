@@ -23,8 +23,8 @@ export type PersonItem = {
 export const PersonData: PersonItem[] = [
     {
         id: 1,
-        name: 'Muhammad Haris',
-        position: 'Founder / Marketer',
+        name: 'Ahmad Hussnain',
+        position: 'Founder',
         image: {
             url: '/images/member-1.jpg',
             altTitle: 'Member 1'
@@ -37,8 +37,8 @@ export const PersonData: PersonItem[] = [
     },
     {
         id: 2,
-        name: 'Ahmad Hussnain',
-        position: 'Entrepreneur / Consultant',
+        name: 'Muhmmad Haris',
+        position: 'Marketing Manager / Co-founder',
         image: {
             url: '/images/member-1.jpg',
             altTitle: 'Member 2'

@@ -205,7 +205,7 @@ export const Contact = () => {
                             <h6 className="info-2__text-h6">Reach out now!</h6>
 
                             <h3 className="info-2__h3">
-                                <a href="tel:+9230886698646">(+92) 308-86698646</a>
+                                <a href="tel:+923080496028">(+92) 308-0496028</a>
                             </h3>
 
                             <div className="info-2__text-2">Start the collaboration with us while figuring out the best solution based on your needs.</div>

@@ -46,7 +46,7 @@ export const Copyright = () => {
                                 <ul className="f-w__list">
                                     <li className="black-coral-f-14">1-A D-Block Allama Iqbal Town, Lhr</li>
                                     <li><a className="black-coral-f-14-h-primary" href="mailto:contact@aizvi.com">contact@aizvi.com</a></li>
-                                    <li><a className="jet-f-16-700-h-jet" href="tel:+9230886698646">(+92) 308-866-98646</a></li>
+                                    <li><a className="jet-f-16-700-h-jet" href="tel:+923080496028">(+92) 308-049-6028</a></li>
                                     <li><a className="primary-f-14-600-h-primary" href="https://aizvi.com/">www.aizvi.com</a></li>
                                 </ul>
                             </div>
@@ -77,7 +77,7 @@ export const Copyright = () => {
                                 <ul className="f-w__list">
                                     <li><a className="black-coral-f-14-h-primary" href="#">Pick up locations</a></li>
                                     <li><a className="black-coral-f-14-h-primary" href="#">Terms of Payment</a></li>
-                                    <li><a className="black-coral-f-14-h-primary" href="#">Privacy Policy</a></li>
+                                    <li><a className="black-coral-f-14-h-primary" href="/sitemap.xml">Sitemap</a></li>
                                     <li><a className="black-coral-f-14-h-primary" href="#">Where to Find Us</a></li>
 
                                 </ul>

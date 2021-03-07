@@ -24,7 +24,7 @@ export const PersonData: PersonItem[] = [
     {
         id: 1,
         name: 'Ahmad Hussnain',
-        position: 'Founder',
+        position: 'Co-founder',
         image: {
             url: '/images/member-1.jpg',
             altTitle: 'Member 1'
@@ -38,7 +38,7 @@ export const PersonData: PersonItem[] = [
     {
         id: 2,
         name: 'Muhmmad Haris',
-        position: 'Marketing Manager / Co-founder',
+        position: 'Co-founder / Marketing Manager',
         image: {
             url: '/images/member-1.jpg',
             altTitle: 'Member 2'

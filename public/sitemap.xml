@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://aizvi.vercel.app/services/</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://aizvi.vercel.app/themes-templates/</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://aizvi.vercel.app/open-source/</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://aizvi.vercel.app/solutions/</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://aizvi.vercel.app/work/</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://aizvi.vercel.app/contact-us/</loc>
+        <changefreq>daily</changefreq>
+    </url>
+</urlset>

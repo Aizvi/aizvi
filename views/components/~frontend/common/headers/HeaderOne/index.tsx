@@ -116,7 +116,7 @@ export const HeaderOne = (props: Props) => {
 							<li>
 								<a href="tel:+923080496028" className="mh-tel">
 									<span className="gl-icon u-s-mr-2"><FaPhone /></span>
-									<span>+92-308-86698646</span>
+									<span>+92-308-0496028</span>
 								</a>
 							</li>
 							<li>

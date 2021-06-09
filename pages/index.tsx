@@ -1,25 +1,25 @@
-//#region Global Imports
-import React, { useEffect } from 'react';
+// //#region Global Imports
+ import React from 'react';
 import { NextPage } from 'next';
-import AOS from 'aos';
-//#endregion Global Imports
-
-//#region Local imports
-import { IndustryData, IndustryItem } from '@data/industry';
-import { ServiceData, ServiceItem } from '@data/service';
-import { ProcessData } from '@data/process';
-import {
-  Hero,
-  Section1,
-  SectionProcess,
-  SectionBanner,
-  SectionPortfolio,
-  SectionTeam,
-  Card1,
-  Card2
-} from '@components';
-import { Main } from '@layouts';
-//#endregion Local imports
+// import AOS from 'aos';
+// //#endregion Global Imports
+//
+// //#region Local imports
+// import { IndustryData, IndustryItem } from '@data/industry';
+// import { ServiceData, ServiceItem } from '@data/service';
+// import { ProcessData } from '@data/process';
+// import {
+//   Hero,
+//   Section1,
+//   SectionProcess,
+//   SectionBanner,
+//   SectionPortfolio,
+//   SectionTeam,
+//   Card1,
+//   Card2
+// } from '@components';
+// import { Main } from '@layouts';
+// //#endregion Local imports
 
 //#region Component
 

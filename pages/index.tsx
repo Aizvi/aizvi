@@ -25,7 +25,7 @@ import { Main } from '@layouts';
 
 
 //#region Component
-
+/*
 
 const HomePage: NextPage = () => {
 
@@ -151,6 +151,14 @@ const HomePage: NextPage = () => {
 
 
 };
+*/
+const HomePage: NextPage = () => {
+	return (<h1>Hello</h1>
+		);
 
-// export default HomePage;
+
+};
+	
+
+ export default HomePage;
 //#endregion Component

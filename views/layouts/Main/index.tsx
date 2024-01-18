@@ -102,7 +102,6 @@ export const Main = (props: Props) => {
           name="description"
           content="Aizvi offers cutting-edge IT services and digital experiences, specializing in web and mobile application development for global clients. Based in Lahore, Pakistan, we deliver collaborative and powerful digital solutions."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="robots"
           content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"

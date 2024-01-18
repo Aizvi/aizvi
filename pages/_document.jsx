@@ -2,6 +2,9 @@
 import React from 'react';
 // In the place of Main component our page is injected
 import Document, { Head, Main, NextScript } from 'next/document';
+
+import { GA_TRACKING_ID } from '@utils/gtag';
+
 //#endregion Global Imports
 
 /**
@@ -22,35 +25,44 @@ import Document, { Head, Main, NextScript } from 'next/document';
  * server and run only on client-side.
  */
 class MyDocument extends Document {
-	render() {
-		return (
+  render() {
+    return (
       <html lang="en" dir="ltr">
         <Head>
           {/* Required meta tags */}
           <meta charSet="utf-8" />
-          <meta name="description" content="" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {/* Manifest to work offline */}
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
           {/* Google Fonts */}
-          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+          />
           <meta name="theme-color" content="#ffffff" />
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `
+            }}
+          />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')`
-            }}
-          ></script>
-          <script
-            src="https://www.google-analytics.com/analytics.js"
-            async
-            defer
-          />
           {/* Noscript */}
           <noscript>
             <h1>JavaScript is disabled in your browser.</h1>
@@ -62,7 +74,7 @@ class MyDocument extends Document {
         </body>
       </html>
     );
-	}
+  }
 }
 
 export default MyDocument;
